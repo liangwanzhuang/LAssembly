@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace LAssembly
+namespace LAssembly 
 {
     [System.Serializable]
     internal struct SkinData
