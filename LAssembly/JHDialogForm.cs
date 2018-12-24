@@ -6,7 +6,7 @@ using DevExpress.XtraEditors;
 using System.ComponentModel;
 using LAssembly;
 
-namespace LAssembly
+namespace LAssembly 
 {
     public class JHDialogForm : XtraForm
     {
