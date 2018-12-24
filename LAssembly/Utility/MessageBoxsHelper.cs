@@ -13,29 +13,56 @@ namespace LAssembly.Utility
             MessageBox.Show(inStr, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
-        public static void ShowWarning(Form inForm, string inStr)
+        /// <summary>
+        /// 显示信息提示框。
+        /// </summary>
+        /// <param name="text">提示文本。</param>
+        /// <returns>OK按钮。</returns>
+        public static DialogResult ShowInfo(string text)
         {
-            MessageBox.Show(inForm, inStr, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            if (Application.OpenForms.Count == 0)
+            {
+                return MessageBox.Show(text, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                return MessageBox.Show(Application.OpenForms[0], text, Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        public static void ShowWarning(string inStr)
+        /// <summary>
+        /// 显示询问提示框。
+        /// </summary>
+        /// <param name="text">提示文本。</param>
+        /// <returns>Yes/No按钮。</returns>
+        public static DialogResult ShowQuestion(string text)
         {
-            MessageBox.Show(inStr, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            if (Application.OpenForms.Count == 0)
+            {
+                return MessageBox.Show(text, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+            else
+            {
+                return MessageBox.Show(Application.OpenForms[0], text, Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            }
+
         }
 
-        public static void ShowError(string inStr)
+        /// <summary>
+        /// 显示询问提示框。
+        /// </summary>
+        /// <param name="text">提示文本。</param>
+        /// <returns>Yes/No/Cancel按钮。</returns>
+        public static DialogResult ShowQuestionWithCancel(string text)
         {
-            MessageBox.Show(inStr, "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-        }
-
-        public static bool ShowQuestion(string inStr)
-        {
-            return MessageBox.Show(inStr, "系统提示", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) == DialogResult.Yes;
-        }
-
-        public static bool ShowYesNo(string inStr)
-        {
-            return MessageBox.Show(inStr, "系统提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+            if (Application.OpenForms.Count == 0)
+            {
+                return MessageBox.Show(text, Application.ProductName, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            }
+            else
+            {
+                return MessageBox.Show(Application.OpenForms[0], text, Application.ProductName, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            }
         }
     }
 }
