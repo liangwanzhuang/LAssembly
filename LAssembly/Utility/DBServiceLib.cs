@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace LAssembly.Utility
 {
@@ -74,7 +75,81 @@ namespace LAssembly.Utility
             return ds;
         }
 
-        public int GetCount(string sql, string connectKey = "Oracle")
+
+        /// <summary>
+        ///   task.ContinueWith(t =>{  todo..
+        ///    this.BeginInvoke(new System.Threading.ThreadStart(delegate () { todo update UI  }));
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <param name="connectKey"></param>
+        /// <returns></returns>
+        public Task<DataSet> GetTaskDataSet(string sql, string connectKey = "Oracle")
+        {
+
+            Task<DataSet> task = new Task<DataSet>(() =>
+            {
+                DataSet ds = new DataSet();
+                try
+                {
+                    var connSetting = System.Configuration.ConfigurationManager.ConnectionStrings[connectKey];
+
+                    if (connSetting.ProviderName == "Oracle.DataAccess.Client")
+                    {
+                        using (OracleConnection conn = new OracleConnection(connSetting.ConnectionString))
+                        {
+                            try
+                            {
+                                conn.Open();
+                                OracleCommand cmd = conn.CreateCommand();
+                                cmd.CommandText = sql;
+                                OracleDataAdapter da = new OracleDataAdapter();
+                                da.SelectCommand = cmd;
+                                da.Fill(ds);
+                            }
+                            catch (OracleException ex)
+                            {
+                                MessageBoxsHelper.ShowInformation(ex.ToString());
+                            }
+                            finally
+                            {
+                                conn.Clone();
+                            }
+                        }
+                    }
+                    else if (connSetting.ProviderName == "System.Data.SqlClient")
+                    {
+                        using (SqlConnection conn = new SqlConnection(connSetting.ConnectionString))
+                        {
+                            try
+                            {
+                                conn.Open();
+                                SqlCommand sc = new SqlCommand(sql, conn);
+                                SqlDataAdapter da = new SqlDataAdapter(sc);
+                                da.Fill(ds);
+                            }
+                            catch (SqlException ex)
+                            {
+                                MessageBoxsHelper.ShowInformation(ex.ToString());
+                            }
+                            finally
+                            {
+                                conn.Close();
+                            }
+                        }
+                    }
+                }
+                catch (OracleException ex)
+                {
+                    MessageBoxsHelper.ShowInformation(ex.ToString());
+                    ds = null;
+                }
+                return ds;
+            }
+            );
+            task.Start();
+            return task;
+        }
+            public int GetCount(string sql, string connectKey = "Oracle")
         {
             DataSet ds = new DataSet();
             var connSetting = System.Configuration.ConfigurationManager.ConnectionStrings[connectKey];
