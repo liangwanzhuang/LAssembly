@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LTools.Utility
+namespace MR.LTools.Utility
 {
     public class DBServiceLib
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace LTools.Utility
+namespace MR.LTools.Utility
 {
     public class XmlHelper
     {

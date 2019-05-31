@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace LTools.Utility
+namespace MR.LTools.Utility
 {
     public class MessageBoxsHelper
     {

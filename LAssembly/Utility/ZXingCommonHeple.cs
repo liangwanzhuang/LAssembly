@@ -6,7 +6,7 @@ using System.Text;
 using ZXing;
 using ZXing.Common;
 
-namespace LTools.Utility
+namespace MR.LTools.Utility
 {
     public class ZXingCommonHeple
     {

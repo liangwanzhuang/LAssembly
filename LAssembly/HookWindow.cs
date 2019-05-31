@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
-using LTools;
-using LTools.Properties;
+using MR.LTools;
+using MR.LTools.Properties;
 
-namespace LTools
+namespace MR.LTools
 {
     internal class HookWindow : System.Windows.Forms.NativeWindow, System.IDisposable
     {

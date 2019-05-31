@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 using System.Reflection;
 using System.Text;
 
-namespace LTools.Utility
+namespace MR.LTools.Utility
 {
     public class BrowerWebserviceHelper
     {
