@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LAssembly.Utility
+namespace LTools.Utility
 {
     public class DBServiceLib
     {
@@ -41,7 +41,7 @@ namespace LAssembly.Utility
                         }
                         finally
                         {
-                            conn.Clone();
+                           conn.Close();;
                         }
                     }
                 }
@@ -112,7 +112,7 @@ namespace LAssembly.Utility
                             }
                             finally
                             {
-                                conn.Clone();
+                               conn.Close();;
                             }
                         }
                     }
@@ -189,7 +189,7 @@ namespace LAssembly.Utility
                     }
                     finally
                     {
-                        conn.Clone();
+                       conn.Close();;
                     }
                 }
             }
@@ -255,7 +255,7 @@ namespace LAssembly.Utility
                     }
                     finally
                     {
-                        conn.Clone();
+                       conn.Close();;
                     }
                 }
             }
@@ -325,7 +325,7 @@ namespace LAssembly.Utility
                     }
                     finally
                     {
-                        conn.Clone();
+                       conn.Close();;
                     }
                 }
             }
@@ -360,7 +360,7 @@ namespace LAssembly.Utility
                     }
                     finally
                     {
-                        conn.Clone();
+                       conn.Close();;
                     }
                 }
             }
@@ -415,7 +415,7 @@ namespace LAssembly.Utility
                     }
                     finally
                     {
-                        conn.Clone();
+                        conn.Close();
                     }
                 }
             }

@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
-namespace LAssembly.Utility
+namespace LTools.Utility
 {
     public class LogHelper
     {
-        public static void WriteLoG(string sPath,string logName, string content)
+        public static void WriteLog( string logName, string content, string sPath ="")
         {
-            sPath += "\\";
+            if (string.IsNullOrEmpty(sPath))
+            {
+                sPath = Application.StartupPath;
+            }
+            else
+                sPath += "\\";
             if (!Directory.Exists(sPath))
             {
                 Directory.CreateDirectory(sPath);

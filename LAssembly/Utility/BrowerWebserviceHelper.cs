@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 using System.Reflection;
 using System.Text;
 
-namespace LAssembly.Utility
+namespace LTools.Utility
 {
     public class BrowerWebserviceHelper
     {
@@ -17,13 +17,12 @@ namespace LAssembly.Utility
         /// 
         /// </summary>
         /// <param 接口地址www.xxx.asmx="ServerUrl"></param>
-        ///  /// <param 类名="className"></param>
         /// <param 请求方法名 ="methodname"></param>
         /// <param 接口参数 参数名称=参数值 ="args"></param>
         /// <returns></returns>
-        public static object InvokeWebService(string ServerUrl, string className, string methodname, object[] args)
+        public static object InvokeWebService(string ServerUrl, string methodname, object[] args)
         {
-            string name = className;
+            string name = "EnterpriseServerBase.WebService.DynamicWebCalling";
             string[] parts = ServerUrl.Split('/');
             string[] pps = parts[parts.Length - 1].Split('.');
             string classname = pps[0];

@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace LAssembly.Utility
+namespace LTools.Utility
 {
     public class ImageHelper
     {

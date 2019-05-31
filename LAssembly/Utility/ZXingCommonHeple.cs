@@ -6,10 +6,17 @@ using System.Text;
 using ZXing;
 using ZXing.Common;
 
-namespace LAssembly.Utility
+namespace LTools.Utility
 {
     public class ZXingCommonHeple
     {
+        /// <summary>
+        /// 创建条形码
+        /// </summary>
+        /// <param name="code">条码code</param>
+        /// <param name="height">高度</param>
+        /// <param name="width">宽度</param>
+        /// <returns></returns>
         public static Bitmap BuildBarCode(string code, int height, int width)
         {
             Bitmap img = null;
@@ -27,6 +34,12 @@ namespace LAssembly.Utility
             //img.Save(filePath, System.Drawing.Imaging.ImageFormat.Jpeg);
             return img;
         }
+
+        /// <summary>
+        /// 读取条码
+        /// </summary>
+        /// <param name="img"></param>
+        /// <returns></returns>
         public static string RedbarCode(Bitmap img)
         {
             string ret = string.Empty;
@@ -50,6 +63,14 @@ namespace LAssembly.Utility
             }
             return ret;
         }
+        /// <summary>
+        /// 创建二维码
+        /// </summary>
+        /// <param name="code">二维码内容</param>
+        /// <param name="height">高度</param>
+        /// <param name="width">宽度</param>
+        /// <param name="margin">设置周围空白边距</param>
+        /// <returns></returns>
         public static Bitmap BulidQRCode(string code,int height, int width, int margin)
         {
             Bitmap img = null;
@@ -68,6 +89,15 @@ namespace LAssembly.Utility
             return img;
         }
 
+        /// <summary>
+        /// 创建带logo的二维码
+        /// </summary>
+        /// <param name="code">二维码内容</param>
+        /// <param name="logoImg">logo</param>
+        /// <param name="height">高度</param>
+        /// <param name="width">宽度</param>
+        /// <param name="margin">设置周围空白边距</param>
+        /// <returns></returns>
         public static Bitmap BulidQRHaveLogo(string code ,Bitmap logoImg,int height,int width, int margin)
         {
             Bitmap img = null;
@@ -94,6 +124,11 @@ namespace LAssembly.Utility
             g.DrawImage(logoImg, logoRec);
             return img;
         }
+        /// <summary>
+        /// 读入二维码
+        /// </summary>
+        /// <param name="img"></param>
+        /// <returns></returns>
         public static string RedQRCode(Bitmap img)
         {
             string ret = string.Empty;

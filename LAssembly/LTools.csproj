@@ -7,8 +7,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B49E81B4-F371-409E-A6A0-F8ECA9A3F3F9}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>LAssembly</RootNamespace>
-    <AssemblyName>LAssembly</AssemblyName>
+    <RootNamespace>LTools</RootNamespace>
+    <AssemblyName>LTools</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

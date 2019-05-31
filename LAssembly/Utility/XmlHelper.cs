@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace LAssembly.Utility
+namespace LTools.Utility
 {
     public class XmlHelper
     {
         #region 反序列化
         /// <summary>
-        /// 反序列化
+        /// 反序列化 Deserialize(typeof(Entity),xml)
         /// </summary>
         /// <param name="type">类型</param>
         /// <param name="xml">XML字符串</param>
@@ -33,7 +33,7 @@ namespace LAssembly.Utility
             }
         }
         /// <summary>
-        /// 反序列化
+        /// 反序列化 
         /// </summary>
         /// <param name="type"></param>
         /// <param name="xml"></param>
@@ -47,7 +47,7 @@ namespace LAssembly.Utility
 
         #region 序列化
         /// <summary>
-        /// 序列化
+        /// 序列化 Deserialize(typeof(Entity),Entity)
         /// </summary>
         /// <param name="type">类型</param>
         /// <param name="obj">对象</param>

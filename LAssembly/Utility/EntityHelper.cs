@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 
-namespace LAssembly.Utility
+namespace LTools.Utility
 {
     /// 操作实体工具类。
     /// </summary>

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using DevExpress.XtraEditors;
 using System.ComponentModel;
-using LAssembly;
+using LTools;
 
-namespace LAssembly 
+namespace LTools 
 {
     public class JHDialogForm : XtraForm
     {
