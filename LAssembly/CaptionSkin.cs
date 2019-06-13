@@ -57,7 +57,7 @@ namespace MR.LTools
                 this.hook = new HookWindow(this.mainForm, this.skinfile);
             }
             this.hook.IsSkin = true;
-            this.mainForm.ControlBox = false;
+          // this.mainForm.ControlBox = false;//底部任务栏不显示窗体图标
         }
 
         public void UninstallSkin()
