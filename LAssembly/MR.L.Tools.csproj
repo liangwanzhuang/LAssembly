@@ -87,6 +87,12 @@
     <Compile Include="UC\TabControlEx.Designer.cs">
       <DependentUpon>TabControlEx.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC\TextBoxLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\TextBoxLine.Designer.cs">
+      <DependentUpon>TextBoxLine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility\BrowerWebserviceHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\DataValid.cs" />
