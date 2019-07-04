@@ -81,6 +81,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SkinData.cs" />
+    <Compile Include="UC\TabControlEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UC\TabControlEx.Designer.cs">
+      <DependentUpon>TabControlEx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utility\BrowerWebserviceHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\DataValid.cs" />
@@ -118,6 +124,7 @@
     <Folder Include="Lib\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\1562205559.jpg" />
     <Content Include="Resources\logo.png" />
     <Content Include="Resources\关闭 %281%29.png" />
     <Content Include="Resources\最大化.png" />
