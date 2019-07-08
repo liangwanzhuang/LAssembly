@@ -81,6 +81,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SkinData.cs" />
+    <Compile Include="UC\ButtonEx.cs" />
     <Compile Include="UC\TabControlEx.cs">
       <SubType>Component</SubType>
     </Compile>
