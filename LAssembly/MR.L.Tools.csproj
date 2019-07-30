@@ -89,6 +89,7 @@
     <Compile Include="Custom\frmLoading.Designer.cs">
       <DependentUpon>frmLoading.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custom\WaitDialogForm.cs" />
     <Compile Include="HookWindow.cs" />
     <Compile Include="JHDialogForm.cs">
       <SubType>Form</SubType>
