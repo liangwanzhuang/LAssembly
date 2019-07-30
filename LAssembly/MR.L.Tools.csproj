@@ -76,39 +76,60 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaptionSkin.cs" />
+    <Compile Include="Custom\MessageBoxEx.cs" />
+    <Compile Include="Custom\UCMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\UCMessageBox.Designer.cs">
+      <DependentUpon>UCMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
     <Compile Include="HookWindow.cs" />
     <Compile Include="JHDialogForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SkinData.cs" />
-    <Compile Include="UC\ButtonEx.cs" />
-    <Compile Include="UC\MenuTabControl.cs">
+    <Compile Include="Custom\ButtonEx.cs" />
+    <Compile Include="Custom\MenuTabControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UC\TabControlEx.cs">
+    <Compile Include="Custom\TabControlEx.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UC\TabControlEx.Designer.cs">
+    <Compile Include="Custom\TabControlEx.Designer.cs">
       <DependentUpon>TabControlEx.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC\TextBoxLine.cs">
+    <Compile Include="Custom\TextBoxLine.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UC\TextBoxLine.Designer.cs">
+    <Compile Include="Custom\TextBoxLine.Designer.cs">
       <DependentUpon>TextBoxLine.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utility\SplashScreenManager.cs" />
     <Compile Include="Utility\BrowerWebserviceHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\DataValid.cs" />
     <Compile Include="Utility\DBServiceLib.cs" />
     <Compile Include="Utility\EntityHelper.cs" />
     <Compile Include="Utility\ImageHelper.cs" />
+    <Compile Include="Utility\INIHelper.cs" />
     <Compile Include="Utility\LogHelper.cs" />
     <Compile Include="Utility\MessageBoxsHelper.cs" />
     <Compile Include="Utility\PYMHelper.cs" />
     <Compile Include="Utility\XmlHelper.cs" />
     <Compile Include="Utility\ZXingCommonHeple.cs" />
     <Compile Include="WinAPIs.cs" />
+    <EmbeddedResource Include="Custom\UCMessageBox.resx">
+      <DependentUpon>UCMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -135,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\1562205559.jpg" />
+    <Content Include="Resources\loading.gif" />
     <Content Include="Resources\logo.png" />
     <Content Include="Resources\关闭 %281%29.png" />
     <Content Include="Resources\最大化.png" />

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MenuTabControl
+namespace MR.LTools
 {
     public partial class MenuTabControl : System.Windows.Forms.TabControl
     {

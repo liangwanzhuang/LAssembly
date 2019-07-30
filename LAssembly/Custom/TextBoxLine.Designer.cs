@@ -1,6 +1,6 @@
-﻿namespace MR.LTools.UC
+﻿namespace MR.LTools.Custom
 {
-    partial class TabControlEx
+    partial class TextBoxLine
     {
         /// <summary> 
         /// 必需的设计器变量。

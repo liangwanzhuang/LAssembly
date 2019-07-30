@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D; 
 using System.ComponentModel;
 
-namespace MR.LTools
+namespace MR.LTools.Custom
 {
     public enum ControlState
     {

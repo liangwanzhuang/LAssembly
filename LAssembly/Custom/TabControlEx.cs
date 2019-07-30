@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using MR.LTools.Properties;
 
-namespace MR.LTools.UC
+namespace MR.LTools.Custom
 {
     public partial class TabControlEx :  System.Windows.Forms.TabControl
     {

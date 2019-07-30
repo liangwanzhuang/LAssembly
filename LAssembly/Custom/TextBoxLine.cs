@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace MR.LTools.UC
+namespace MR.LTools.Custom
 {
     public partial class TextBoxLine :  System.Windows.Forms.TextBox
     {
