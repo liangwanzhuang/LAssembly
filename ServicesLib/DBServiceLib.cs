@@ -14,7 +14,7 @@ namespace ServiceLib
     public class DBService
     {
         private static ConnectionStringSettings connSetting  = null;
-        public static DBService DBInstance(string connectKey = "Oracle")
+        public static DBService DBInstance(string connectKey = "")
         {
             if (!string.IsNullOrEmpty(connectKey))
             {
