@@ -22,7 +22,7 @@ namespace ServiceLib
             }
             else
             {
-                connSetting = new ConnectionStringSettings("", "Data Source= (DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.7.201)(PORT = 1521)))(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = jhemr)));User ID=jhemr;Password=nidaye", "Oracle.DataAccess.Clien");
+                connSetting = new ConnectionStringSettings("Oracle", "Data Source= (DESCRIPTION =(ADDRESS_LIST =(ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.7.201)(PORT = 1521)))(CONNECT_DATA =(SERVER = DEDICATED)(SERVICE_NAME = jhemr)));User ID=jhemr;Password=nidaye", "Oracle.DataAccess.Client");
             }
             return new DBService();
         }
